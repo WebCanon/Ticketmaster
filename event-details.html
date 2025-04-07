@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Details</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TicketClone</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="add-event.html">Add Event</a></li>
+        <li><a href="login.html" id="loginLink">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="event-detail">
+    <div class="container"></div>
+  </section>
+
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content">
+      <h3>Ticket Purchased!</h3>
+      <p>Thank you for booking your ticket.</p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

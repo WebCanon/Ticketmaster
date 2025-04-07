@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Event</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <section class="add-event-form">
+    <h2>Add New Event</h2>
+    <input type="text" id="title" placeholder="Event Title" />
+    <input type="text" id="image" placeholder="Image URL" />
+    <input type="text" id="date" placeholder="Date" />
+    <input type="text" id="location" placeholder="Location" />
+    <textarea id="description" placeholder="Event Description"></textarea>
+    <button onclick="addEvent()">Add Event</button>
+    <p id="add-msg"></p>
+  </section>
+
+  <script>
+    function addEvent() {
+      const newEvent = {
+        title: document.getElementById("title").value,
+        image: document.getElementById("image").value,
+        date: document.getElementById("date").value,
+        location: document.getElementById("location").value,
+        description: document.getElementById("description").value,
+      };
+
+      const events = JSON.parse(localStorage.getItem("events") || "[]");
+      events.push(newEvent);
+      localStorage.setItem("events", JSON.stringify(events));
+      document.getElementById("add-msg").textContent = "Event added!";
+    }
+  </script>
+</body>
+</html>
